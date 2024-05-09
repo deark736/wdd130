@@ -1,0 +1,96 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rock+Salt&display=swap');
+
+/* Define CSS variables */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #e7c24f;
+  --accent1-color: #ecf0f1;
+  --accent2-color: #381d2a;
+
+  --heading-font: 'Rock Salt', cursive;
+  --paragraph-font: Roboto, sans-serif;
+
+  --nav-background-color: #2c3e50;
+  --nav-link-color: #ecf0f1;
+  --nav-hover-link-color: #ffffff;
+  --nav-hover-background-color: #2c3e50;
+}
+
+/* Styling headings and paragraph elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+p {
+  font-family: var(--paragraph-font);
+  color: var(--primary-color);
+}
+
+/* Remove underlines from social media links */
+nav.sociallinks a {
+  text-decoration: none;
+}
+
+/* Limit entire width of the page */
+body {
+  max-width: 960px;
+  margin: 0 auto; /* Center align the content */
+}
+
+/* Additional styling can be added here */
+/* CSS for hero section */
+.hero {
+  position: relative;
+  width: 100%; /* Relative width declaration */
+}
+  
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+  
+/* CSS for the h1 heading within the hero class */
+.hero h1 {
+  position: absolute; /* Position absolutely */
+  top: 20px; /* Place it 20 pixels from the top */
+  left: 50%; /* Move it to the middle horizontally */
+  transform: translateX(-50%); /* Center it horizontally */
+  width: 100%; /* Match the width of the hero image */
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent background color */
+  color: white; /* Text color */
+  padding: 10px; /* Padding for text */
+  box-sizing: border-box; /* Include padding in the width */
+  text-align: center; /* Center text horizontally */
+}    
+  
+/* CSS for the article within the hero class */
+.hero article {
+  position: absolute; /* Position absolutely */
+  top: 50%; /* Place it at 50% from the top */
+  left: 50%; /* Place it at 50% from the left */
+  transform: translate(-50%, -50%); /* Center the element */
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent background color */
+  color: white; /* Text color */
+  padding: 20px; /* Padding for readability */
+  width: 80%; /* Example width for the article */
+}    
+  
+/* CSS for the image inside the article */
+.hero article img {
+  float: right; /* Float the image to the right */
+  margin-left: 20px; /* Example margin for spacing */
+  width: 200px; /* Example width for the image */
+  height: auto; /* Maintain aspect ratio */
+} 
+/* CSS for article text color */
+.hero article p {
+  color: white; /* Example color for text */
+}
+/* CSS for social media icons */
+nav.sociallinks img {
+  width: 30px; /* Example width for the icons */
+  height: auto; /* Maintain aspect ratio */
+}  
