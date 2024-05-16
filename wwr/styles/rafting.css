@@ -11,9 +11,9 @@
   --heading-font: 'Rock Salt', cursive;
   --paragraph-font: Roboto, sans-serif;
 
-  --nav-background-color: #2c3e50;
-  --nav-link-color: #ecf0f1;
-  --nav-hover-link-color: #ffffff;
+  --nav-background-color: #f8f9fa;
+  --nav-link-color: #34495e;
+  --nav-hover-link-color: #f39c12;
   --nav-hover-background-color: #2c3e50;
 }
 
@@ -89,8 +89,110 @@ body {
 .hero article p {
   color: white; /* Example color for text */
 }
-/* CSS for social media icons */
+/* Footer styling */
+footer {
+  background-color: var(--nav-background-color); /* Match the background color */
+  padding: 20px;
+  display: flex; /* Use Flexbox */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Center items vertically */
+}
+
+/* Social media icons styling */
+nav.sociallinks {
+  display: flex; /* Arrange icons horizontally */
+  gap: 10px; /* Example gap between icons */
+}
+
 nav.sociallinks img {
   width: 30px; /* Example width for the icons */
   height: auto; /* Maintain aspect ratio */
-}  
+}
+/* Header styling using CSS Grid */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Logo takes auto width, Navigation takes remaining space */
+  align-items: center; /* Center items vertically */
+  padding: 20px; /* Example padding */
+}
+
+/* Logo styling */
+.logo img {
+  max-width: 100px; /* Example max-width */
+}
+
+/* Navigation styling using CSS Flex */
+nav {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--nav-link-color);
+  margin-left: 20px; /* Example margin between navigation items */
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+}
+/* Style the History section */
+.history {
+  padding: 20px;
+}
+
+.history h2 {
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+}
+
+/* Center the header */
+.history-heading {
+  text-align: center;
+}
+
+/* Flexbox layout for history content */
+.history-content {
+  display: flex;
+  flex-direction: row; /* Arrange content horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+.history-image {
+  max-width: 300px; /* Example max-width for the image */
+  margin: 0 20px; /* Margin on both sides for balanced spacing */
+}
+
+.history-content p {
+  color: var(--primary-color);
+  font-family: var(--paragraph-font);
+  margin: 0; /* Remove default margins */
+  flex: 1; /* Distribute remaining space equally between paragraphs */
+}
+/* Flexbox layout for adventures content */
+.adventures-content {
+  display: flex;
+  justify-content: space-between; /* Evenly distribute space between images */
+  align-items: center; /* Center items vertically */
+}
+
+.adventures-content figure {
+  flex: 1; /* Each figure takes equal space */
+  margin: 0 10px; /* Example margin between figures */
+}
+
+.adventures-content img {
+  width: 100%; /* Ensure images fill their container */
+}
+
+.adventures-content figcaption {
+  text-align: center; /* Center align captions */
+  margin-top: 10px; /* Example margin between images and captions */
+}
+
+.adventures h2 {
+  text-align: center; /* Center align heading */
+}
+main, .adventures {
+  margin-bottom: 40px; /* Add margin to create space between the sections and the footer */
+}
