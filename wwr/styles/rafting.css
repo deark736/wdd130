@@ -283,7 +283,6 @@ nav a:hover {
 }
 
 .input-row input,
-.input-row select,
 .input-row textarea {
   width: 100%; /* Make inputs fill the width of their container */
   padding: 10px; /* Add padding */
@@ -319,7 +318,7 @@ main {
   margin-bottom: 0; /* Remove bottom margin */
 }
 /* Apply font family and color to labels, inputs, selects, textareas, and buttons */
-label, input, select, textarea, button {
+label, input, textarea, button {
   font-family: var(--paragraph-font); /* Use the same font as paragraphs */
   color: var(--primary-color); /* Use the same color as headings and paragraphs */
 }
@@ -341,4 +340,10 @@ label, input, select, textarea, button {
 }
 figcaption {
   font-family: var(--paragraph-font); /* Use the same font as paragraphs */
+}
+h1 {
+  text-align: center;
+}
+p.label-bold {
+  font-weight: bold;
 }

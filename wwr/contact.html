@@ -26,6 +26,9 @@
 
     
     <main>
+        <!-- Main heading -->
+        <h1>Contact Us</h1>
+    
         <section class="contact-info">
             <div class="contact-details">
                 <h2>Contact Information</h2>
@@ -77,13 +80,16 @@
                         <input type="email" id="email" name="email">
                     </div>
                 </div>
-                <div class="input-row">
-                    <label for="purpose">Purpose of Message:</label>
-                    <select id="purpose" name="purpose">
-                        <option value="general">General Inquiry</option>
-                        <option value="reservation">Reservation Question</option>
-                        <option value="suggestion">Website Suggestion</option>
-                    </select>
+                <div class="radio-group">
+                  <p class="label-bold">Purpose of Message:</p>
+                  <input type="radio" name="purpose" id="general" value="general">
+                  <label for="general">General Inquiry</label>
+                  
+                  <input type="radio" name="purpose" id="reservation" value="reservation">
+                  <label for="reservation">Reservation Question</label>
+                  
+                  <input type="radio" name="purpose" id="website" value="website">
+                  <label for="website">Website Suggestion</label>
                 </div>
                 <div class="input-row">
                     <label for="message">Message:</label>
