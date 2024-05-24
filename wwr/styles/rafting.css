@@ -99,9 +99,10 @@ footer {
 }
 
 /* Social media icons styling */
-nav.sociallinks {
+.sociallinks {
   display: flex; /* Arrange icons horizontally */
   gap: 10px; /* Example gap between icons */
+  margin-right: 20px; /* Add margin to the right of the social media icons */
 }
 
 nav.sociallinks img {
@@ -131,6 +132,7 @@ nav a {
   text-decoration: none;
   color: var(--nav-link-color);
   margin-left: 20px; /* Example margin between navigation items */
+  font-family: var(--paragraph-font); /* Use the same font as paragraphs */
 }
 
 nav a:hover {
@@ -193,6 +195,150 @@ nav a:hover {
 .adventures h2 {
   text-align: center; /* Center align heading */
 }
-main, .adventures {
-  margin-bottom: 40px; /* Add margin to create space between the sections and the footer */
+.adventures {
+  margin-bottom: 40px; /* Add margin to create space between the .adventures section and the footer */
+}
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center vertically */
+  border-top: 2px solid #ccc; /* Lighter border color */
+  border-bottom: 2px solid #ccc; /* Lighter border color */
+}
+
+.contact-details {
+  width: 30%; /* Adjust width as needed */
+}
+
+.contact-details p {
+  margin: 0; /* Remove default margin */
+}
+
+.contact-details address {
+  margin-bottom: 15px; /* Increase margin between address and other items */
+}
+
+.contact-details .phone, 
+.contact-details .email {
+  margin-bottom: 10px; /* Increase margin between phone/email and other items */
+}
+
+.map-container {
+  width: 70%; /* Adjust width as needed */
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+.map-container iframe {
+  width: 100%; /* Make iframe fill the container width */
+  height: calc(100vh - 200px); /* Set height relative to viewport height (minus padding and borders) */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  border: none; /* Remove border if needed */
+}
+.employee-profiles {
+  text-align: center; /* Center align the heading */
+}
+
+.centered-heading {
+  margin-bottom: 20px; /* Add space below the heading */
+}
+
+.employees {
+  display: flex; /* Use flexbox */
+  justify-content: space-around; /* Distribute items evenly */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.employee {
+  width: 30%; /* Set width for each employee */
+  margin-bottom: 20px; /* Add space between employees */
+  text-align: center; /* Center align employee content */
+}
+.employee img {
+  max-width: 100%; /* Limit maximum width to prevent image overflow */
+  max-height: 200px; /* Set maximum height to maintain aspect ratio */
+  display: block; /* Ensure images behave as block elements */
+  margin: 0 auto; /* Center align images horizontally */
+}
+.contact-form {
+  background-color: #f2f2f2; /* Set background color */
+  padding: 20px 100px; /* Set top/bottom padding to 20px and left/right padding to 100px */
+  text-align: center; /* Center align the heading */
+}
+
+.contact-form h2 {
+  margin-bottom: 20px; /* Add space below the heading */
+}
+
+.input-row {
+  margin-bottom: 15px; /* Add space between input rows */
+  flex: 1; /* Distribute flex items evenly within the container */
+}
+
+.input-row label {
+  display: block; /* Display labels as block elements */
+  text-align: left; /* Align labels to the left */
+  font-weight: bold; /* Set font weight for labels */
+}
+
+.input-row input,
+.input-row select,
+.input-row textarea {
+  width: 100%; /* Make inputs fill the width of their container */
+  padding: 10px; /* Add padding */
+  border: 2px solid #ccc; /* Set border */
+  border-radius: 5px; /* Set border radius */
+  font-family: var(--paragraph-font); /* Use paragraph font */
+  margin-top: 5px; /* Add space between inputs */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.input-row input[type="checkbox"] {
+  width: auto; /* Set width to auto for checkbox */
+  margin-right: 5px; /* Add space between checkbox and label */
+}
+
+.input-row input[type="checkbox"] + label {
+  display: inline; /* Set labels for checkboxes as inline elements */
+}
+
+.input-row button {
+  background-color: var(--accent2-color); /* Set background color for button */
+  color: #fff; /* Set font color for button */
+  border: none; /* Remove default button border */
+  padding: 10px 20px; /* Add padding */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  border-radius: 5px; /* Set border radius */
+}
+
+.input-row button:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
+main {
+  margin-bottom: 0; /* Remove bottom margin */
+}
+/* Apply font family and color to labels, inputs, selects, textareas, and buttons */
+label, input, select, textarea, button {
+  font-family: var(--paragraph-font); /* Use the same font as paragraphs */
+  color: var(--primary-color); /* Use the same color as headings and paragraphs */
+}
+.input-container {
+  display: flex; /* Use flexbox to make the input rows side by side */
+  gap: 10px; /* Add spacing between the input rows */
+}
+.wireframe-link a {
+  color: var(--accent2-color); /* Set link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the text bold */
+}
+
+.wireframe-link a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+.wireframe-link {
+  margin-left: 20px; /* Add margin to the left of the wireframe link */
+}
+figcaption {
+  font-family: var(--paragraph-font); /* Use the same font as paragraphs */
 }
