@@ -92,10 +92,21 @@ body {
 /* Footer styling */
 footer {
   background-color: var(--nav-background-color); /* Match the background color */
-  padding: 20px;
+  padding: 20px; /* Add padding */
   display: flex; /* Use Flexbox */
-  justify-content: flex-end; /* Align items to the right */
+  justify-content: space-between; /* Distribute items evenly along the main axis */
   align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+footer p {
+  margin-bottom: 10px; /* Add margin between paragraphs */
+}
+
+footer nav {
+  display: flex; /* Display navigation items as flex */
+  justify-content: flex-end; /* Align navigation to the right */
+  flex-grow: 1; /* Allow navigation to fill remaining space */
 }
 
 /* Social media icons styling */
@@ -112,20 +123,17 @@ nav.sociallinks img {
 /* Header styling using CSS Grid */
 header {
   display: grid;
-  grid-template-columns: auto 1fr; /* Logo takes auto width, Navigation takes remaining space */
+  grid-template-columns: 1fr 2fr; /* Logo takes 1/3 of the width, Navigation takes 2/3 */
   align-items: center; /* Center items vertically */
+  justify-items: center; /* Horizontally center items within their columns */
   padding: 20px; /* Example padding */
+  width: 100%; /* Ensure the header spans the full width of the viewport */
+  box-sizing: border-box; /* Include padding and border in the element's total width calculation */
 }
 
 /* Logo styling */
 .logo img {
-  max-width: 100px; /* Example max-width */
-}
-
-/* Navigation styling using CSS Flex */
-nav {
-  display: flex;
-  justify-content: flex-end; /* Align items to the right */
+  max-width: 200px; /* Adjust the max-width as needed */
 }
 
 nav a {
@@ -204,10 +212,19 @@ nav a:hover {
   align-items: center; /* Center vertically */
   border-top: 2px solid #ccc; /* Lighter border color */
   border-bottom: 2px solid #ccc; /* Lighter border color */
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-details, .map-container {
+  flex: 1;
+  min-width: 300px; /* Ensure the elements do not get too small */
 }
 
 .contact-details {
-  width: 30%; /* Adjust width as needed */
+  width: 100%; /* Set width to 100% of the parent container */
+  padding-left: 20px; /* Add padding to the left side */
+  box-sizing: border-box; /* Include padding and border in the total width */
 }
 
 .contact-details p {
@@ -224,7 +241,8 @@ nav a:hover {
 }
 
 .map-container {
-  width: 70%; /* Adjust width as needed */
+  flex: 2; /* Make the map container wider than the contact details */
+  max-width: 100%; /* Set maximum width to 100% */
   display: flex;
   align-items: center; /* Center vertically */
 }
@@ -245,26 +263,39 @@ nav a:hover {
 }
 
 .employees {
-  display: flex; /* Use flexbox */
-  justify-content: space-around; /* Distribute items evenly */
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  display: flex; /* Arrange employee profiles in a row */
+  justify-content: center; /* Center align items horizontally */
+  flex-wrap: wrap; /* Allow wrapping of profiles to the next row */
 }
 
 .employee {
-  width: 30%; /* Set width for each employee */
-  margin-bottom: 20px; /* Add space between employees */
-  text-align: center; /* Center align employee content */
+  width: 200px; /* Set a fixed width for each employee profile */
+  margin: 20px; /* Add some margin around each profile */
+  text-align: center; /* Center align the content */
 }
 .employee img {
-  max-width: 100%; /* Limit maximum width to prevent image overflow */
-  max-height: 200px; /* Set maximum height to maintain aspect ratio */
-  display: block; /* Ensure images behave as block elements */
-  margin: 0 auto; /* Center align images horizontally */
+  max-width: 100%; /* Ensure images don't exceed their container */
+}
+
+.employee p {
+  margin-top: 10px; /* Add some spacing between paragraphs */
 }
 .contact-form {
   background-color: #f2f2f2; /* Set background color */
   padding: 20px 100px; /* Set top/bottom padding to 20px and left/right padding to 100px */
   text-align: center; /* Center align the heading */
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 20px 50px; /* Reduce padding on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 20px 20px; /* Further reduce padding on the smallest screens */
+  }
 }
 
 .contact-form h2 {
@@ -335,12 +366,45 @@ label, input, textarea, button {
 .wireframe-link a:hover {
   text-decoration: underline; /* Underline on hover */
 }
-.wireframe-link {
-  margin-left: 20px; /* Add margin to the left of the wireframe link */
-}
 h1 {
   text-align: center;
 }
 p.label-bold {
   font-weight: bold;
+}
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+  }
+
+  .contact-details, .map-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .employee-profiles {
+    display: block; /* Stack employee profiles vertically on small screens */
+  }
+
+  .employee {
+    margin-bottom: 20px;
+  }
+}
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  header, footer {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+}
+.radio-container {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust as needed for spacing between radio options */
+}
+.radio-container input[type="radio"] {
+  margin-right: 8px; /* Adjust as needed */
+}
+.radio-group {
+  margin-bottom: 20px; /* Adjust as needed */
 }
