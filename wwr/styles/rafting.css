@@ -64,7 +64,7 @@ body {
   padding: 10px; /* Padding for text */
   box-sizing: border-box; /* Include padding in the width */
   text-align: center; /* Center text horizontally */
-  font-size: 1.2em; /* Set initial font size slightly larger */
+  font-size: 1.5em; /* Set initial font size for larger screens */
 }
 
 /* CSS for the article within the hero class */
@@ -77,50 +77,50 @@ body {
   color: white; /* Text color */
   padding: 15px; /* Padding for readability */
   width: 80%; /* Example width for the article */
-  font-size: 1em; /* Set initial font size slightly larger */
+  font-size: 1.2em; /* Set initial font size for larger screens */
 }
 
 @media screen and (max-width: 768px) {
   /* Adjustments for smaller screens */
   .hero h1 {
-    font-size: 1.1em; /* Decrease font size for smaller screens */
+    font-size: 1em; /* Maintain font size for smaller screens */
   }
   .hero article {
-    font-size: 0.9em; /* Decrease font size for smaller screens */
+    font-size: 0.9em; /* Maintain font size for smaller screens */
   }
 }
 
 @media screen and (max-width: 480px) {
   /* Further adjustments for even smaller screens */
   .hero h1 {
-    font-size: 1em; /* Further decrease font size for the smallest screens */
+    font-size: 0.9em; /* Further decrease font size for the smallest screens */
   }
   .hero article {
-    font-size: 0.8em; /* Further decrease font size for the smallest screens */
+    font-size: 0.6em; /* Further decrease font size for the smallest screens */
   }
 }    
   
 /* CSS for the image inside the article */
 .hero article img {
   float: right; /* Float the image to the right */
-  margin-left: 1em; /* Example margin for spacing using relative unit */
-  width: 10em; /* Example width for the image using relative unit */
+  margin-left: 2em; /* Increase margin for spacing */
+  width: 15em; /* Increase width for the image */
   height: auto; /* Maintain aspect ratio */
 }
 
 @media screen and (max-width: 768px) {
   /* Adjustments for smaller screens */
   .hero article img {
-    width: 8em; /* Decrease width for smaller screens */
-    margin-left: 0.5em; /* Decrease margin for smaller screens */
+    width: 12em; /* Adjust width for smaller screens */
+    margin-left: 1em; /* Adjust margin for smaller screens */
   }
 }
 
 @media screen and (max-width: 480px) {
   /* Further adjustments for even smaller screens */
   .hero article img {
-    width: 6em; /* Further decrease width for the smallest screens */
-    margin-left: 0.2em; /* Further decrease margin for the smallest screens */
+    width: 10em; /* Adjust width for the smallest screens */
+    margin-left: 0.5em; /* Adjust margin for the smallest screens */
   }
 } 
 /* CSS for article text color */
