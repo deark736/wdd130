@@ -704,10 +704,6 @@ p.label-bold {
   }
 }
 
-.cta {
-  text-align: center; /* Center-align text */
-}
-
 /* Common styling for Call to Action (CTA) section */
 .cta {
   text-align: center; /* Center-align CTA content */
