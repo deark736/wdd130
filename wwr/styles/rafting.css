@@ -679,7 +679,7 @@ p.label-bold {
   }
 
   .hero-section article {
-    font-size: 0.9em; /* Maintain font size for smaller screens */
+    font-size: 0.6em; /* Further reduce font size for smaller screens */
   }
 
   /* Additional adjustments for header and footer */
